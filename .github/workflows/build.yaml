@@ -22,6 +22,6 @@ jobs:
           #### AUFGABE COMPILE, DOCKER BUILD UND PUSH
             # hier ist Platz für maven package und docker build
             mvn package
-             docker login --username manu-lisa --password ${{secrets.swt2_vorlesung}} ghcr.io
+             docker login --username manu-lisa --password ${{secrets.SWT2_VL}} ghcr.io
             docker build -t ghcr.io/manu-lisa/pet-clinic:latest -f Dockerfile . 
              docker push ghcr.io/manu-lisa/pet-clinic:latest  
